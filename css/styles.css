@@ -194,13 +194,6 @@ button:focus,
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
-
-.button__secondary {
-  background-color: var(--first-button-background);
-  color: var(--button-text);
-  align-items: center;
-}
-
  @keyframes color-change {
    0% {
      fill: #FBFBFB;
