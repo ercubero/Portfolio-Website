@@ -7,12 +7,11 @@
 */
 :root {
   --primary-color:  #1c1034;
-  --secondary-color:  #8c8e7b;
-  --light-blue: #6680b5;
-  --blue: #7e93c2;
-  --first-button-background:#004483;
-  --secondary-button-background:#004483;
-  --button-text: #abb1b5;
+  --secondary-color: #7e93c2;
+  --blue: #6680b5;
+  --light-blue: #B6C2DD;
+  --first-button-background: #8FC9FF;
+  --button-text: #F3E9D2;
   --primary-font-weight: 900;
   --secondary-font-weight: 700;
   --font-size:20px;
@@ -61,7 +60,7 @@
   }
 
   a {
-    color: var(--light-blue);
+    color: var(--blue);
     font-size: var(--font-size);
     text-align: center;
   }
@@ -109,7 +108,7 @@
   }
 
   p {
-      color: var(--blue);
+      color: var(--light-blue);
       font-size: var(--font-size);
       font-weight:var(--secondary-font-weight);
       text-align: center;
@@ -130,44 +129,20 @@
    @supports (display:grid) {
       .grid {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 20px;
-          margin: 0;
+          grid-template-columns: 1fr 1fr ;
+          grid-gap: 10px;
+          margin: 0px;
           text-align: center;
       }
-
+}
    .grid__item {
-     background-color: var(--light-blue);
+     background-color: var(--blue);
      width: auto;
      min-height: auto;
-     margin: 0;
+     margin: 0 ;
      padding:var(--padding);
    }
-   @media all and (min-width:580px) and (max-width: 1480px){
-     .grid {
-       grid-template-columns: 1fr 1fr ;
-       grid-gap: 10px;
-     }
-     .grid__item:last-child {
-       grid-column: auto / auto;
-       grid-row: auto / auto;
-       }
-     .grid__item:last-child {
-         grid-column: 2 / 2;
-         grid-row: 1 / 2;
-       }
-   }
-   }
-   @media all and (max-width: 500px) {
-     .grid {
-       grid-template-columns: 1fr;
-       grid-gap: 10px;
-     }
-     .grid__item:last-child {
-       grid-column: auto / auto;
-       grid-row: auto / auto;
-       }
-   }
+
 .button, button {
   /* overwrites browser defaults and resets the border */
   border: none;
@@ -175,14 +150,13 @@
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the button */
-  background-color:var(--first-button-background);
+  background-color:var(--blue);
   color: var(--button-text);
   text-decoration: none;
   padding: 3px;
   border-radius: 2px;
   /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition-property: opacity, center;
+  transition-property: opacity;
   transition-duration: 0.2s;
 }
 button:hover,
@@ -194,36 +168,22 @@ button:focus,
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
+.button__secondary {
+  background-color: var(--first-button-background);
+  color: var(--button-text);
+  align-items: center;
+}
+
  @keyframes color-change {
-   0% {
-     fill: #FBFBFB;
-   }
-   50% {
-     fill: #ff6600;
-   }
-   100% {
-     fill:  #152238;
-   }
+   0% { color: #a3a3a3; }
+   50% { color: #D6492A; }
+   100% { color:  #E57200; }
  }
- svg .st1, .st2, .st3 {
+ svg .st1, .st2 {
      animation: 3s color-change infinite alternate linear;
  }
- @keyframes color-change {
-   0% {
-     fill: #002147;
-   }
-   50% {
-     fill: #D6492A;
-   }
-   100% {
-     fill:  #E57200;
-   }
- }
- svg g {
-     animation: 4s color-change infinite alternate linear;
- }
 
- @keyframes rocket-move {
+ @keyframes rocket-move-reverse {
    from {
      transform: rotate(0deg) ;
    }
@@ -231,26 +191,10 @@ button:focus,
      transform: rotate(-45deg);
    }
  }
-
- .rocket {
- animation:5s rocket-move infinite alternate linear;
- }
- @keyframes rocket-move-reverse {
-     from {
-         transform: rotate(-45deg);
-     }
-     to {
-         transform: rotate(0deg);
-     }
- }
-
- .rocket{
-     animation: 5s rocket-move-reverse infinite alternate linear;
- }
  .page-footer {
    clear: both;
    display: flex;
    flex-direction: column;
    text-align:center;
-   color: var(--light-blue);
- }
+   color: var( --blue ) ;
+  }
