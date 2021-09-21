@@ -6,7 +6,7 @@
   - Secondary Color (Orange): #7e93c2;
 */
 :root {
-  --primary-color:  #1c1034;
+  --primary-color: #1c1034;
   --secondary-color: #7e93c2;
   --blue: #6680b5;
   --light-blue: #B6C2DD;
@@ -14,12 +14,12 @@
   --button-text: #F3E9D2;
   --primary-font-weight: 900;
   --secondary-font-weight: 700;
-  --font-size:20px;
-  --padding:20px;
+  --font-size: 20px;
+  --padding: 20px;
 }
 * {
   box-sizing: border-box;
-}
+  }
   body {
     background-color: var(--primary-color);
     font-weight: var(--primary-font-weight);
@@ -134,7 +134,7 @@
           margin: 0px;
           text-align: center;
       }
-}
+    }
    .grid__item {
      background-color: var(--blue);
      width: auto;
@@ -143,7 +143,7 @@
      padding:var(--padding);
    }
 
-.button, button {
+  .button, button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
