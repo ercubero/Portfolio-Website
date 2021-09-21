@@ -199,17 +199,17 @@ button:focus,
 }
 
  @-webkit-keyframes color-change {
-   0% { color: #191919; }
-   50% { color: #ff6600; }
-   100% { color:  #152238; }
+   0% { color: #a3a3a3; }
+   50% { color: #D6492A; }
+   100% { color:  #E57200; }
  }
 
  @keyframes color-change {
-   0% { color: #191919; }
-   50% { color: #ff6600; }
-   100% { color:  #152238; }
+   0% { color: #a3a3a3; }
+   50% { color: #D6492A; }
+   100% { color:  #E57200; }
  }
- svg .st1, .st2, .st3 {
+ svg .st1, .st2 {
      -webkit-animation: 3s color-change infinite alternate linear;
              animation: 3s color-change infinite alternate linear;
  }
